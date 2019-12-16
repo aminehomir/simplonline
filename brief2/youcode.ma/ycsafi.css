@@ -1,0 +1,387 @@
+*{
+    font-family: sans-serif;
+}
+body{
+margin: 0px;
+}
+#up{
+    width: 70px;
+    top: 600px;
+    left: 30px;
+    position: fixed;
+}
+
+header{
+     position: fixed; 
+    background-color: black;
+    font-family: sans-serif;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+}
+
+header img{
+    
+    width: 40x;
+    height: 40px;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.menu{
+margin-top: -8px;
+       
+}
+
+
+.title{
+    
+    font-size: 24px;
+    color: white;
+    background-image: url("IMAGE/Groupe%2058.png");
+    background-size: cover;
+    background-position: center;
+    margin-top: 0px;
+    margin-left: -10px;
+    padding: 160px;
+    letter-spacing: 2px; 
+}
+
+.menu a
+{
+    margin-top: 50px;
+    font-size: 14px; 
+    position: relative;
+    left: 40%;
+    top: -20px;
+    padding: 0px;               
+    margin: 0px;
+    margin-left: 60px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+h1{
+    font-size: 40px;
+}
+.container{
+    margin-top: 90px;
+    text-align: center;
+    
+    
+}
+p{
+    font-size: 17px;
+     line-height:25px;
+    
+}
+
+
+
+button{ 
+    
+    background-color:#038DFE;
+    color: white;
+    
+    border: 0px;
+    font-size: 20px;
+    position: absolute;
+    left: 80%;
+    top: 10px;
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:200px;
+}
+
+button:hover{
+    background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color: #57A9EC;
+  transform: translateY(-7px);
+}
+
+.col-md-6 p {
+    position: relative;
+    right: -60px;
+    line-height: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.col-md-6 {
+     font-family: sans-serif;
+    position: absolute;
+    
+    right: 0px;
+    color: white;
+   
+    top: 850px;
+    left:700px;
+    background-color: #0176D5;
+    
+    padding: 87px;
+    
+    
+}
+
+
+.simplon_titre {
+     font-family: sans-serif;
+    line-height: 200px;
+    font-size: 10px;
+    position: absolute;
+    top: 1400px;
+    right: 0px;
+    left: 0px;
+    text-align:center;
+           
+}
+.table4{
+    
+    color: #666666;
+    text-align: right;
+    width: 100%; 
+    font-family: montserrat;
+    letter-spacing: 0.08em;
+}
+
+.last{
+    float:right;
+}
+.tory-content{
+    position: absolute;
+    right: auto;
+    bottom: auto;
+ }
+
+.container-fluid h1 {
+    font-family:sans-serif;
+    font-size: 26px;
+}
+.container-fluid{
+   
+    font-family:sans-serif;
+    position:absolute;
+    top: 1640px;
+    left: 0px;
+    right: 0px;
+   text-align: center;
+    letter-spacing: 2px;
+    
+    
+}
+
+
+
+.i1{
+    position: absolute;
+
+    top: 850px;
+    left: 0px;
+    width: 727px;
+}
+
+
+.container h1{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.B2 {
+    background-color: #038DFE;
+    box-shadow: 0px 8px 15px rgba(0,0,128, 0.3);
+    color: white;
+    font-size: 15px;
+    position: relative;
+    left: 150px;
+    top: -100px;
+    padding: 13px; 
+    border-radius: 20px;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+}
+.B2:hover {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color:gray;
+  transform: translateY(-7px);
+}
+
+
+
+
+.box1 {
+    
+    position: absolute;
+    left: 110px;
+    font-family: sans-serif;
+    height: 468px;
+     box-shadow: 0px 0px 10px #888686;
+
+    top: 1850px;
+    text-align: center;
+}
+.box1 img{
+    width: 380px;
+}
+.box1 strong {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+   
+}
+.box1 p{
+    position: relative;
+    top: 10px;
+    line-height: 40px; 
+    font-size: 16px;
+}
+
+.box2 {
+    position: absolute;
+    left: 570px;
+    font-family: sans-serif;
+    height: 468px;
+     box-shadow: 0px 0px 10px #888686;
+    
+    top: 1850px;
+    text-align: center;
+}
+.box2 img{
+    width: 380px;
+}
+.box2 strong {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+   
+}
+.box2 p{
+    position: relative;
+    top: 10px;
+    line-height: 40px; 
+    font-size: 16px;
+}
+
+.box3 {
+    
+    position: absolute;
+    right: 110px;
+    font-family: sans-serif;
+    height: 468px;
+     box-shadow: 0px 0px 10px #888686;
+    top: 1850px;
+    text-align: center;
+}
+.box3 img{
+    width: 380px;
+}
+.box3 strong {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+   
+}
+.box3 p{
+    position: relative;
+    top: 10px;
+    line-height: 40px; 
+    font-size: 16px;
+}
+
+.box4 {
+    
+    position: absolute;
+    left: 110px;
+    top: 2380px;
+    font-family: sans-serif;
+    height: 468px;
+     box-shadow: 0px 0px 10px #888686;
+
+    
+    text-align: center;
+}
+.box4 img{
+    width: 380px;
+}
+.box4 strong {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+   
+}
+.box4 p{
+    position: relative;
+    top: 10px;
+    line-height: 40px; 
+    font-size: 16px;
+}
+
+.box5 {
+    position: absolute;
+    left: 570px;
+    font-family: sans-serif;
+    height: 468px;
+     box-shadow: 0px 0px 10px #888686;
+    
+    top: 2380px;
+    text-align: center;
+}
+.box5 img{
+    width: 380px;
+}
+.box5 strong {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+   
+}
+.box5 p{
+    position: relative;
+    top: 10px;
+    line-height: 40px; 
+    font-size: 16px;
+}
+
+
+
+.footer{
+    
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 2900px;
+    
+}
+.contact p{
+    position: relative;
+    right: 4px;
+    top: 20px;
+}
+.contact {
+    position: relative;
+    right: 250px;
+    top:-20px;
+}
+
+.copy {
+    position: relative;
+    top:10px;
+    
+}
+.last{
+    position: relative;
+    top:20px;
+    right: 30px;
+    
+}
+.last img{
+    position: relative;
+    top: 10px;
+    padding: 8px;
+    height: 17px;
+}
