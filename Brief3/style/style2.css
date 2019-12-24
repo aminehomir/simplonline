@@ -1,0 +1,379 @@
+*{
+    font-family:sans-serif;
+}
+body{
+   margin: 0px;
+    width: 100%;
+    
+}
+
+p{
+    font-size: 17px;
+     
+    
+}
+.nav img{
+    position: fixed;
+    left: 175px;
+    width: 40x;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 10px;
+      z-index: 1;
+}
+.nav{
+    position: fixed;
+    background-color: black;
+    border-bottom: 2px solid #000000;
+    text-align: right;
+    height: 70px;
+    width: 100%;
+    line-height: 70px;
+      z-index: 1;
+}
+.menu{
+ margin: 0 110px 0 0 ;
+   
+}
+
+.menu a
+{   
+    color: white;
+    font-size: 14px; 
+    
+    margin: 0 80px 0 20px;
+    line-height: 60px;
+    
+    text-decoration: none;
+    
+}
+
+.menu button{ 
+    
+    background-color:#038DFE;
+    color: white;
+    
+    border: 0px;
+    font-size: 20px;
+    
+    
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:200px;
+}
+.menu button:hover {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color:gray;
+  transform: translateY(-7px);
+}
+
+label{
+    color: white;
+    margin: 0 40px 0 0;
+   font-size: 26px;
+    line-height: 70px;
+    display: none;
+}
+#toggle{
+    display:none;
+}
+.title{
+    
+    font-size: 24px;
+    color: white;
+  
+    background-image: url("image/Groupe%2058.png");
+    
+    background-size: cover;
+    background-position: center;
+  
+   
+    padding: 140px;
+    letter-spacing: 2px; 
+}
+.buttons {
+   margin-top: 50px;
+    
+}
+
+
+
+.buttons button{ 
+    
+    background-color:#038DFE;
+    
+    color: white;
+    border: 0px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    width:160px;
+}
+.buttons button:hover {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color:gray;
+  transform: translateY(-7px);
+}
+
+
+.container h1{
+    font-size: 40px;
+
+}
+.container{
+    margin-top: 180px;
+    text-align: center;
+    margin-bottom: 150px;
+    
+    
+}
+
+ .box{
+    display: flex;
+       flex-direction: row;
+    width: 100%;
+}
+
+.col-md-1{
+    color: white;
+    line-height:75px;
+    background-color:#0176D5; 
+    text-align: center;
+   
+   padding: 20px;
+    width: 50%;
+   
+  
+    
+}
+.col-md-1 p{
+    font-size: 20px;
+}
+.box img{
+
+  width: 50%;
+    height: auto;
+}
+
+.simplon_titre {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    line-height: 30px;
+    font-size: 10px;
+    left: 0px;
+    text-align:center;
+           
+}
+
+.container-fluid h1{
+    font-size: 28px;
+    line-height: 35px;
+}   
+.container-fluid{
+   
+    font-family:sans-serif;
+   
+   text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 130px;
+    
+}
+
+
+.box1 strong{
+    
+    font-size: 20px;
+    }
+    
+    
+.box1 {
+ 
+    width: 30%;
+    height: auto;
+   
+    margin: 20px;
+   
+    box-shadow: 0px 0px 10px #888686;
+    text-align: center;
+ 
+}
+.box1 img{
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+}
+.box22{
+    justify-content: center;
+    display: flex;
+    flex-wrap:wrap;
+    text-align: center;
+    width: 100%;
+    
+    
+}
+
+.copy{
+     
+    
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+.copy img{
+  
+  padding-left: 10px;  
+}
+
+.footer{
+    justify-content: center;
+    display: grid;
+     grid-column-gap: 400px ;
+  grid-template-columns: auto auto auto;
+    margin-top: 150px;
+    text-decoration: none;
+    color: #666666;
+    background-color: black;
+    width: auto;
+    height: 100px;
+  
+}
+
+.c1{
+    float: right;
+}
+.c2{
+    margin-top:30px; 
+    
+}
+
+/*----------------media-------------*/
+@media only screen and (max-width: 1250px){
+    label {
+        display: block;
+
+    }
+   
+    .menu img{
+    position: fixed;
+    left: 175px;
+        top:6px;
+    width: 40x;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 10px;
+     
+    
+}
+    .menu  {
+        text-align: center;
+        width: 100%;
+       
+        
+        display: none;
+    }
+    .menu a {
+        display:block;
+        border-bottom:1px solid #EAEAEB;
+        margin:0;
+        
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    #toggle:checked + .menu{
+        display: block;
+       
+        
+         
+    }
+    button{ 
+    
+    background-color:#038DFE;
+    color: white;
+    
+    border: 0px;
+    font-size: 20px;
+   
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:200px;
+}
+    .title{
+        text-align: center;
+    }
+    
+    .box{
+    display: flex;
+     flex-direction: column;
+    width: 100%;
+}
+    .box img{
+        width: 100%;
+    }
+    .col-md-1{
+    color: white;
+    background-color:#0176D5;
+        
+    text-align: center;
+    line-height: 30px;
+   padding: 0px;
+        margin: auto;
+        width: 100%; 
+}
+    
+  .box22{
+    
+    width: 100%;
+      width: auto;
+    
+    
+}  
+   .box1 {
+ 
+    width: 80%;
+    height: auto;
+   
+    margin: 30px;
+   
+    box-shadow: 0px 0px 10px #888686;
+    text-align: center;
+ 
+} 
+    
+           .footer{
+        text-decoration: none;
+        text-align: center;
+    display: flex;
+    flex-direction: column;    
+ 
+    width: auto;
+    height: 100%;
+  
+}
+    .c1{
+    float:none;
+}
+    .c2{
+    margin-top:20px; 
+    
+}
+    
+    .copy img{
+        padding: 10px;
+        height: 20px;
+    }
+    
+    .copy{
+     
+   
+    text-align:center;
+    justify-content: center;
+    
+}
+    }

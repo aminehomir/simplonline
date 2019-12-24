@@ -1,0 +1,532 @@
+*{
+    font-family:sans-serif;
+}
+body{
+   margin: 0px;
+    width: 100%;
+ 
+}
+
+.nav img{
+    position: fixed;
+    left: 175px;
+    width: 40x;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 10px;
+      z-index: 1;
+}
+.nav{
+    position: fixed;
+    background-color: black;
+    border-bottom: 2px solid #000000;
+    text-align: right;
+    height: 70px;
+    width: 100%;
+    line-height: 70px;
+      z-index: 1;
+}
+.menu{
+ margin: 0 110px 0 0 ;
+   
+}
+
+.menu a
+{   
+    color: white;
+    font-size: 14px; 
+    
+    margin: 0 80px 0 20px;
+    line-height: 60px;
+    
+    text-decoration: none;
+    
+}
+
+.menu button{ 
+    
+    background-color:#038DFE;
+    color: white;
+    
+    border: 0px;
+    font-size: 20px;
+    
+    
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:200px;
+}
+.menu button:hover {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color:gray;
+  transform: translateY(-7px);
+}
+
+label{
+    color: white;
+    margin: 0 40px 0 0;
+   font-size: 26px;
+    line-height: 70px;
+    display: none;
+}
+#toggle{
+    display:none;
+}
+.title{
+    
+    font-size: 24px;
+    color: white;
+    background-image: url("image/slide1.jpg");
+    background-size: cover;
+    background-position: center;
+  
+   
+    padding: 160px;
+    letter-spacing: 2px; 
+}
+.buttons {
+   
+    margin-top:  -110px;
+    margin-left: 160px;
+}
+
+.buttons input{
+    background-color: Transparent; 
+    box-shadow: 0px 8px 15px rgba(0,0,128, 0.3);
+    border-color: white;
+    color: white;
+    font-size: 15px;
+   
+    padding: 10px; 
+    border-radius: 20px;
+    width: 150px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+
+}
+.buttons input:hover {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color:gray;
+  transform: translateY(-7px);
+}
+
+.buttons button{ 
+    
+    background-color:#038DFE;
+    color: white;
+    border: 0px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    width:200px;
+}
+.buttons button:hover {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color:gray;
+  transform: translateY(-7px);
+}
+
+.container{
+    line-height: 25px;
+    margin-top: 170px;
+    text-align: center;
+   
+}
+.icon-box img{
+    height: 9%;
+}
+
+.icon-box h4{
+    font-size:22px;
+}
+
+
+.icon-box{
+    
+  font-size: 17px;  
+  padding: 10px; 
+    margin: 10px;
+    line-height: 25px;
+}
+
+.col-md-4 {
+    margin-top: 60px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.box{
+    display: flex;
+       flex-direction: row;
+    width: 100%;
+}
+
+.col-md-1{
+    color: white;
+    
+    background-color:#0176D5; 
+    text-align: center;
+    line-height: 28px;
+   padding: 70px;
+    width: 50%;
+   
+  
+    
+}
+.col-md-1 h2{
+    font-size: 32px;
+}
+.box img{
+
+  width: 50%;
+    height: auto;
+}
+
+.simplon_titre { 
+    
+    margin-top:130px; 
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background-image: url("image/img2.png");
+    background-size: cover;
+    background-position: center;
+  
+   
+    padding-top: 160px;
+    padding-bottom: 160px;
+    letter-spacing: 2px;
+    
+    
+    
+}
+.simplon_titre h1 {
+    font-size: 50px;
+    text-align: center;
+    
+}
+ 
+.simplon_titre p {
+    color: #0176D5;
+   
+   
+}
+
+.dash{
+        border-right: 1.5px dashed black ;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+       
+       
+}
+.col-1 {
+    font-size: 20px;
+    
+    color: white;
+    text-align: center;
+    padding:50px;
+    
+   
+    width: 30%;
+}
+
+.col {
+    background-color: #0176D5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+.container11 {
+   
+    margin: auto;
+
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 38px;
+    width: 70%;
+    
+    justify-content: center;
+    text-align: left;
+}
+
+.ocp p {
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.ocp img{
+    width: 80px;
+}
+.ocp{
+    margin-top: 90px;
+    text-align: center;
+    font-family:sans-serif;
+    letter-spacing: 3px;
+}
+.table3 p{
+    font-size: 30px;
+   
+}
+.table3 {
+    margin:40px;
+ display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+   
+    
+}
+.table3 button{
+    
+    margin-top: 25px;
+    margin-left: 30px;
+    background-color:#038DFE;
+    color: white;
+    
+    border: 0px;
+    font-size: 15px;
+   
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:400px;
+    height: 40px;
+}
+
+.table3 button:hover{
+    background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color: #57A9EC;
+  transform: translateY(-7px);
+}
+
+.copy{
+     
+    
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+.copy img{
+  
+  padding-left: 10px;  
+}
+
+.footer{
+    justify-content: center;
+    display: grid;
+     grid-column-gap: 400px ;
+  grid-template-columns: auto auto auto;
+    
+    text-decoration: none;
+    color: #666666;
+    background-color: black;
+    width: auto;
+    height: 100px;
+  
+}
+
+.c1{
+    float: right;
+}
+.c2{
+    margin-top:30px; 
+    
+}
+
+
+/*----------------media-------------*/
+@media only screen and (max-width: 1250px){
+    label {
+        display: block;
+
+    }
+   
+    .menu img{
+    position: fixed;
+    left: 175px;
+        top:6px;
+    width: 40x;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 10px;
+     
+    
+}
+    .menu  {
+        text-align: center;
+        width: 100%;   
+        display: none;
+    }
+    .menu a {
+        display:block;
+        border-bottom:1px solid #EAEAEB;
+        margin:0;
+        
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    #toggle:checked + .menu{
+        display: block;
+       
+        
+         
+    }
+    button{ 
+    
+    background-color:#038DFE;
+    color: white;
+    
+    border: 0px;
+    font-size: 20px;
+   
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:200px;
+}
+    
+   
+    .title h2{
+        font-size: 170%;
+    }
+    
+    .title p{
+        font-size: 100%;
+        
+       
+    }
+    .title{
+  
+    font-size: 18px;
+       
+        text-align: center;
+    color: white;
+    background-image: url("image/slide1.jpg");
+    background-size: cover;
+    background-position: center;
+    line-height: 30px;
+    padding: 100px;
+    letter-spacing: 3px; 
+}
+    .cont{
+        text-align: center;
+        justify-content: center;
+       
+    }
+    .buttons{
+       
+       margin-top:  -90px;
+    margin-left: 20px;
+   
+    }
+    
+    .icon-box img{
+        width: 29px;
+    }
+    
+    .col-md-4 {
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    text-align: center;
+     
+}
+    .box{
+    display: flex;
+     flex-direction: column;
+    width: 100%;
+}
+    .box img{
+        width: 100%;
+    }
+    .col-md-1{
+    color: white;
+    background-color:#0176D5;
+        
+    text-align: center;
+    line-height: 30px;
+   padding: 0px;
+        margin: auto;
+        width: 100%;
+   
+}
+    .col-1 {
+    font-size: 22px;
+    
+    color: white;
+    text-align: center;
+    padding:0px;
+    
+   
+    width: 100%;
+}
+    .dash{
+        border-bottom: 1.5px dashed black ;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+           
+}
+    .col {
+       
+    justify-content: center;
+    text-align:center;
+    background-color: #0176D5;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+        
+}
+    .table3 button{
+    
+   
+    margin-left: 10px;
+        }
+    
+    .footer{
+        text-decoration: none;
+        text-align: center;
+    display: flex;
+    flex-direction: column;    
+ 
+    width: auto;
+    height: 100%;
+  
+}
+    .c1{
+    float:none;
+}
+    .c2{
+    margin-top:20px; 
+    
+}
+    
+    .copy img{
+        padding: 10px;
+        height: 20px;
+    }
+    
+    .copy{
+     
+   
+    text-align:center;
+    justify-content: center;
+    
+}
+}
+

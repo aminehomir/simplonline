@@ -1,0 +1,334 @@
+*{
+    font-family:sans-serif;
+}
+body{
+   margin: 0px;
+    width: 100%;
+    
+}
+
+p{
+    font-size: 17px;
+     
+    
+}
+.nav img{
+    position: fixed;
+    left: 175px;
+    width: 40x;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 10px;
+      z-index: 1;
+}
+.nav{
+    position: fixed;
+    background-color: black;
+    border-bottom: 2px solid #000000;
+    text-align: right;
+    height: 70px;
+    width: 100%;
+    line-height: 70px;
+      z-index: 1;
+}
+.menu{
+ margin: 0 110px 0 0 ;
+   
+}
+
+.menu a
+{   
+    color: white;
+    font-size: 14px; 
+    
+    margin: 0 80px 0 20px;
+    line-height: 60px;
+    
+    text-decoration: none;
+    
+}
+
+.menu button{ 
+    
+    background-color:#038DFE;
+    color: white;
+    
+    border: 0px;
+    font-size: 20px;
+    
+    
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:200px;
+}
+.menu button:hover {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color:gray;
+  transform: translateY(-7px);
+}
+
+label{
+    color: white;
+    margin: 0 40px 0 0;
+   font-size: 26px;
+    line-height: 70px;
+    display: none;
+}
+#toggle{
+    display:none;
+}
+.title{
+    
+    font-size: 24px;
+    color: white;
+  
+    background-image: url("image/Groupe%2055.png");
+    
+    background-size: cover;
+    background-position: center;
+  
+   
+    padding: 140px;
+    letter-spacing: 2px; 
+}
+.buttons {
+   margin-top: 50px;
+    
+}
+
+
+
+.buttons button{ 
+    
+    background-color:#038DFE;
+    
+    color: white;
+    border: 0px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    width:160px;
+}
+.buttons button:hover {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0,0,128, 0.3);
+  color:gray;
+  transform: translateY(-7px);
+}
+
+.container {
+    text-align: center;
+    justify-content: center;
+}
+.container h1{
+    margin-top:50px;
+    font-size: 30px;
+}
+
+
+#rech {
+  
+   
+    font-size: 15px;
+    padding: 13px; 
+    border-radius: 20px;
+    width: 240px;
+    height: 10px;
+   border: 1px solid #707070;
+         
+}
+.barre{
+    margin-top: 50px;
+    margin-right: 80px;
+    float: right;
+}
+.barre button{
+    background-color:#038DFE;
+    
+    color: white;
+    border: 0px;
+    font-size: 14px;
+    padding: 6px;
+    border-radius: 20px;
+    width:100px;
+    margin-left: 10px;
+}
+
+.T1 img{
+text-align: center;
+  width: 100%;  
+    
+}
+.T{
+    
+    width: 100%;
+     justify-content: center;
+    
+    
+}
+.T1 {
+    margin-bottom: 140px; 
+    border-collapse: collapse;
+   justify-content: center;
+    margin-top: 200px;
+    text-align: center;
+    margin-left: 170px;
+    margin-right: 170px;
+}
+.Tcolor{
+    background-color:#038DFE;
+    color: white;
+}
+.T1 tr td {  
+   
+    padding: 6px;
+    border: 2px solid #333;
+    
+}
+td input {
+    border-radius: 20px;
+    padding: 2px;
+    width: auto;
+}
+.copy{
+     
+    
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+.copy img{
+  
+  padding-left: 10px;  
+}
+
+.footer{
+    justify-content: center;
+    display: grid;
+     grid-column-gap: 400px ;
+  grid-template-columns: auto auto auto;
+    
+    text-decoration: none;
+    color: #666666;
+    background-color: black;
+    width: auto;
+    height: 100px;
+  
+}
+
+.c1{
+    float: right;
+}
+.c2{
+    margin-top:30px; 
+    
+}
+
+/*----------------media-------------*/
+@media only screen and (max-width: 1250px){
+    label {
+        display: block;
+
+    }
+   
+    .menu img{
+    position: fixed;
+    left: 175px;
+        top:6px;
+    width: 40x;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 10px;
+     
+    
+}
+    .menu  {
+        text-align: center;
+        width: 100%;
+       
+        
+        display: none;
+    }
+    .menu a {
+        display:block;
+        border-bottom:1px solid #EAEAEB;
+        margin:0;
+        
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    #toggle:checked + .menu{
+        display: block;
+       
+        
+         
+    }
+    button{ 
+    
+    background-color:#038DFE;
+    color: white;
+    
+    border: 0px;
+    font-size: 20px;
+   
+    padding: 10px;
+    
+    border-radius: 20px;
+    width:200px;
+}
+    .title{
+        text-align: center;
+    }
+    
+    .T1 {
+    
+    border-collapse: collapse;
+   justify-content: center;
+    margin-top: 200px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+    .container{
+   
+   
+        justify-content: center;
+}
+    
+        .footer{
+        text-decoration: none;
+        text-align: center;
+    display: flex;
+    flex-direction: column;    
+ 
+    width: auto;
+    height: 100%;
+  
+}
+    .c1{
+    float:none;
+}
+    .c2{
+    margin-top:20px; 
+    
+}
+    
+    .copy img{
+        padding: 10px;
+        height: 20px;
+    }
+    
+    .copy{
+     
+   
+    text-align:center;
+    justify-content: center;
+    
+}
+     }
+
