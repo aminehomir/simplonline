@@ -70,10 +70,7 @@ p{
 }
 
 label{
-    color: white;
-    margin: 0 40px 0 0;
-   font-size: 26px;
-    line-height: 70px;
+  
     display: none;
 }
 #toggle{
@@ -255,6 +252,10 @@ label{
 @media only screen and (max-width: 1250px){
     label {
         display: block;
+          color: white;
+    margin: 35px 40px 0 0;
+   font-size: 26px;
+    line-height: 0px;
 
     }
    
@@ -270,10 +271,9 @@ label{
     
 }
     .menu  {
+        margin-top: 30px;
         text-align: center;
-        width: 100%;
-       
-        
+        width: 100%;   
         display: none;
     }
     .menu a {

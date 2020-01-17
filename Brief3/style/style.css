@@ -24,7 +24,7 @@ body{
     height: 70px;
     width: 100%;
     line-height: 70px;
-      z-index: 1;
+    z-index: 1;
 }
 .menu{
  margin: 0 110px 0 0 ;
@@ -65,10 +65,7 @@ body{
 }
 
 label{
-    color: white;
-    margin: 0 40px 0 0;
-   font-size: 26px;
-    line-height: 70px;
+  
     display: none;
 }
 #toggle{
@@ -81,10 +78,9 @@ label{
     background-image: url("image/slide1.jpg");
     background-size: cover;
     background-position: center;
-  
-   
     padding: 160px;
     letter-spacing: 2px; 
+    
 }
 .buttons {
    
@@ -349,7 +345,22 @@ label{
 
 /*----------------media-------------*/
 @media only screen and (max-width: 1250px){
+    
+    .nav{
+    position: fixed;
+    background-color: black;
+    border-bottom: 2px solid #000000;
+    text-align: right;
+    height: 70px;
+    width: 100%;
+    line-height: 70px;
+      z-index: 1;
+}
     label {
+          color: white;
+    margin: 35px 40px 0 0;
+   font-size: 26px;
+    line-height: 0px;
         display: block;
 
     }
@@ -366,6 +377,7 @@ label{
     
 }
     .menu  {
+        margin-top: 30px;
         text-align: center;
         width: 100%;   
         display: none;

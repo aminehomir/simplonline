@@ -70,10 +70,7 @@ p{
 }
 
 label{
-    color: white;
-    margin: 0 40px 0 0;
-   font-size: 26px;
-    line-height: 70px;
+   
     display: none;
 }
 #toggle{
@@ -231,6 +228,10 @@ td input {
 /*----------------media-------------*/
 @media only screen and (max-width: 1250px){
     label {
+         color: white;
+    margin: 35px 40px 0 0;
+   font-size: 26px;
+    line-height: 0px;
         display: block;
 
     }
@@ -247,10 +248,9 @@ td input {
     
 }
     .menu  {
+        margin-top: 30px;
         text-align: center;
-        width: 100%;
-       
-        
+        width: 100%;   
         display: none;
     }
     .menu a {
