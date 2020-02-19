@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+</head>
+    <body>
+       
+         <div class="nav">
+            
+          <input type="checkbox" id="check"/>
+           <label for="check">
+               <a id="btn">&#9776;</a>
+               <a id="cancel">&#10799;</a>
+            
+            </label>
+            <img src="images/luxurycar.png" alt="logo">
+        <div class="sidebar">
+            
+          <div class="menu" >
+   
+                <a href="#H">Accueil</a>
+               <a href="#R">Réserver</a>
+               <a href="#V">Voitures</a>
+               <a href="#C">Condition</a>
+               
+               <button class="button-2" id="btn-two" >S'inscrire</button>
+               
+               
+               
+           
+              
+              
+           </div>
+
+           
+           
+           </div>
+            </div>
+        
+            <div id="H" class="home">
+                <div class="slider">
+                    <div class="slide active" style="background-image: url('images/slide01.jpg')">
+                        <div class="container">
+                            <div class="caption">
+                                <h1>Une flotte de luxe  </h1>
+                                <p>Plus de 100 véhicules </p>
+                                <a href="">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" style="background-image: url('images/slide02.jpg')">
+                        <div class="container">
+                            <div class="caption">
+                                <h1>L’Audi A4</h1>
+                                <p>L’Audi A4. Avec encore plus de raffinement technologique.</p>
+                                <a href="">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" style="background-image: url('images/slide03.jpg')">
+                        <div class="container">
+                            <div class="caption">
+                                <h1>Mercedes Classe C Coupé </h1>
+                                <p>La Classe C Coupé est plus athlétique que jamais.</p>
+                                <a href="">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                 <div class="controls">
+                     <div class="prev">&#10094;</div>
+                     <div class="next">&#10095;</div>
+                         
+                    
+                </div>
+                
+                </div>
+                 
+                 <div  id="R" class="Resr">
+                <h1 >RÉSERVER UN VÉHICULE!</h1>
+                <div class="D1">
+                    
+                <select name="cars" id="liste" class="cars"onchange="getSelectValue()">
+                    <option>Type de VÉHICULE</option>
+                    <option></option>
+                    <option value="Audi A4">Audi A4</option>
+                    <option value="Mercedes Classe C Coupé">Mercedes Classe C Coupé</option>
+                    <option value="Maserati Levante">Maserati Levante</option>
+                    <option value="Volkswagen Touareg 2019">Volkswagen Touareg 2019</option>
+               
+                  </select>
+                  <div class="D">
+                    <div class="De">
+                  <div class="depart"><img src="images/maps.png" > <strong>DÉPART</strong> </div>
+                 <select id="ville" class="ville">
+                      <option></option>
+                    <option value="192">Safi</option>
+                    <option value="179">Marrakech</option>
+                    <option value="188">Casablanca</option>
+                    <option value="189">Rabat</option>
+                    <option value="187">Agadir</option>
+                    <option value="190">Essaouira</option>
+                    <option value="193">Tanger</option>
+                    <option value="191">Ouarzazate</option>
+                    </select>
+                    </div>
+                    <div class="De">
+                    <div class="depart"> <img src="images/agenda.png" > <strong>DÉPART</strong></div>
+                    <input  id="datetime" class="date" type="date" name="bday" onchange="getdate()">
+                    <input  class="time" type="time" id="appt" name="appt" min="09:00" max="22:00" required>
+                   </div>
+                   </div>
+
+                   <div class="D">
+                    <div class="De">
+                    <div class="depart"><img src="images/maps.png" > <strong>RÉCUPÉRATION</strong> </div>
+                   <select id="ville" class="ville">
+                        <option></option>
+                      <option value="192">Safi</option>
+                      <option value="179">Marrakech</option>
+                      <option value="188">Casablanca</option>
+                      <option value="189">Rabat</option>
+                      <option value="187">Agadir</option>
+                      <option value="190">Essaouira</option>
+                      <option value="193">Tanger</option>
+                      <option value="191">Ouarzazate</option>
+                      </select>
+                    </div>
+                  
+                    <div class="De">
+                       
+                      <div class="depart"> <img src="images/agenda.png" > <strong>RÉCUPÉRATION</strong></div>
+                      <input  id="datetime" class="date" type="date" name="bday" onchange="getdate()">
+                       
+                      <input  class="time" type="time" id="appt" name="appt" min="09:00" max="22:00" required>
+                      </div>
+                     </div>
+                     <button id="btnres">Réserver maintenant</button>
+
+                    </div>
+                     
+                    
+
+              
+               </div>
+                
+               <section class="generale">
+                <div class="reservation">
+                     <div class="res-info">
+                      <div class="information">
+                          
+                       <div class="image">
+                         
+                       </div>
+                      </div>
+                    </div>
+                    <div class="res-inp">
+                       <form>
+                           <div>
+                               <div class="form-input">
+                                   <p>
+                                       <label>Nom <span >*</span></label><br />
+                                       <span><input type="text" name="first-name" id="nom" class="inpttext" placeholder="Votre nom" /></span>
+                                       </p>
+                                       <p>
+                                       <label>Prénom <span>*</span></label><br />
+                                       <span ><input type="text" class="inpttext" id="prenom" name="last-name" placeholder="Votre prenom" /></span>
+                                       </p>
+                                       <p >
+                                       <label>Date Permis <span >*</span></label><br />
+                                       <span><input type="date" class="inpttext" id="age" name="age" onchange="getdate()" placeholder="Votre number"/></span>
+                                       </p>
+                               </div>
+                             <div  class="form-input">
+                               <p>
+                                   <label>Téléphone <span>*</span></label><br />
+                                   <span><input type="text" class="inpttext" id="tele" placeholder="Votre Téléphone" /></span>
+                               </p>
+                               <p class="one-half">
+                               <label>Email <span>*</span></label><br/>
+                               <span><input type="email" class="inpttext" id="mail" name="email" placeholder="Votre Email"/></span>
+                               </p>
+                               <p>
+                                   <label>Addresse </label><br />
+                                   <span ><input type="text" class="inpttext" id="adress" name="address" placeholder="Votre Adresse"/></span>
+                                   </p>
+
+                                   <p>
+                                    <label>Ville </label><br />
+                                    <span ><input type="text" class="inpttext" id="ville" name="city" placeholder="Votre ville"/></span>
+                                    </p>
+                             </div>
+                             <div>
+                              
+                             </div>  
+                           
+                          
+                           <p class="submit"><input type="button"class="inpttext3" id="reserv"  value="Reserver"  /></p>
+                           </div><div></div></form>
+                    </div>
+                </div>
+               
+            </section>
+            
+               
+
+               <div id="V" class="vo">
+               <h1 >VOITURES</h1>
+               </div>
+               <div   class="voitures">
+               
+               <div class="V1" style="background-image: url('images/audi-a4.jpg')">
+                <div class="overlay">
+                    <div class="text">Audi A4</div>
+                  </div>
+            </div>
+
+            <div class="V1" style="background-image: url('images/maserati-levante.jpg')">
+                <div class="overlay">
+                    <div class="text">Maserati Levante</div>
+                  </div>
+             </div>
+
+             <div class="V1" class="V1" style="background-image: url('images/Mercedes_Classe_C_Coupe.jpg')">
+                <div class="overlay">
+                    <div class="text">Mercedes Classe C Coupé</div>
+                  </div>
+             </div>
+
+             <div class="V1" style="background-image: url('images/volkswagen-touareg.jpg')">
+                <div class="overlay">
+                    <div class="text">Volkswagen Touareg 2019</div>
+                  </div>
+             </div>
+
+
+            </div>
+
+            <div id="C" class="condition">
+                <h1 >CONDITION</h1>
+                <div class="mySlides Galerie-first">
+                <div class="cond1">
+                
+                 <div class="C1"style="background-image: url('images/1.jpg')" ></div>
+                <div class="CO">
+                    <h2>longue durée</h2>
+                    <p>Trouvez votre voiture pour une longue durée avec Belina Car. Des prix pas chers pour votre LLD à Marrakech</p>
+                </div>
+               </div>
+                </div>
+               
+                <div class="mySlides Galerie-first">
+                <div class="cond1">
+                    
+                     <div class="C1"style="background-image: url('images/2.jpg')" ></div>
+                    <div class="CO">
+                        <h2>Durée</h2>
+                        <p>La location est consentie pour la durée déterminée au contrat sauf prolongation conventionnelle accordée par le loueur.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="mySlides Galerie-first">
+                    <div class="cond1">
+                        
+                         <div class="C1"style="background-image: url('images/3.jpg')" ></div>
+                        <div class="CO">
+                            <h2>Âge minimal</h2>
+                            <p>Le conducteur doit avoir au minimum 21 ans, et détenir un permis de conduire valable depuis 2 ans au moins.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls1">
+                    <div class="prev" id="exp" onclick="plusDivs(1)">&#10094;</div>
+                    <div class="next" onclick="plusDivs(-1)">&#10095;</div>
+            </div>
+                
+           </div> 
+           </div>
+            </div>
+            
+            
+
+            <footer>
+                <div class="block">
+                <div class="block1">  
+            <img src="images/luxurycar.png" alt="logo">
+                <p> Suivez-nous sur les réseaux sociaux</p>
+                
+                   <a ><img id="facebook" src="images/facebook.png" alt="facebook" ></a>
+                    <a ><img src="images/twitter.png" alt="twitter" ></a>
+                    <a><img src="images/linkedin-in.png" alt="linkedin" ></a>
+                </div>
+                 <div class="block1"> 
+                    
+                     <strong>QUICK LINKS</strong>
+                     <p>Accueil</p>
+                     <p>Réserver</p>
+                     <p>Voitures</p>
+                     <p>Condition</p>
+                     
+                     
+                     
+                        
+                </div>
+                 <div class="block1">
+                     <strong>CONTACT US</strong>
+                     <p>Feel free to get in touch with us via phone or send<br> us a message</p>
+                     <div class="contact">
+                     <p>+1 800 123 1234</p>
+                     <p><strong>email@website.com</strong></p>
+                    </div>
+                </div>
+                     
+                    
+                    </div>
+              
+             <div class="copy">
+            <div class="p">
+                <p>@Copyright 2019. All Right Reserved</p>
+                <div class="p2">
+                <p>Privacy Policy </p>
+                <p>Terms & Conditions</p>
+                    </div>
+                    </div>
+            
+             </div>
+                <div class="footer2">
+                    <img id="logo" src="images/luxurycar.png" alt="logo"><br>
+                    <p>CONTACT US</p>
+                    <strong>+1 800 123 1234</strong><br>
+                    <strong>email@website.com</strong>
+                     <p> Suivez-nous sur les réseaux sociaux</p>
+                    <a ><img id="facebook" src="images/facebook.png" alt="facebook" ></a>
+                    <a ><img src="images/twitter.png" alt="twitter" ></a>
+                    <a><img src="images/linkedin-in.png" alt="linkedin" ></a>
+                    <p>@Copyright 2019</p>
+                    <p> All Right Reserved</p>
+                    
+                
+                    
+                    
+                    
+                
+                </div>
+            </footer>
+              <!-- Inscription -->
+
+    <div class="bg-modal-2">
+        <div class="modal-content2">
+            <div class="Se">S'INSCRIRE</div>
+            <div class="close">+</div>
+           
+            <div class="form">
+             
+              <input type="text" placeholder="name" class="enter2"  >
+              <div class="erreur2"></div>
+              <input type="Email" placeholder="Email" class="enter2" >
+              <div class="erreur2"></div>
+              <input type="password" placeholder="Mot passe" class="enter2" >
+              <div class="erreur2"></div>
+              <input type="password" placeholder="Confirmer Mot passe" class="enter2">
+              <div class="erreur2"></div>
+              <a  id="btninscription" class="enter2">S'inscrire</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="file2.js"></script>  
+    </body>
+
+</html>
