@@ -702,6 +702,7 @@ a img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
+  position: fixed;
   top: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -711,6 +712,7 @@ a img {
           align-items: center;
   display: none;
   z-index: 2;
+  overflow: auto;
 }
 
 .modal-content2 {
