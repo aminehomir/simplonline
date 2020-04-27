@@ -62,11 +62,11 @@ function changeSlide(){
        
 }
 
-function autoPlay(){
+/*function autoPlay(){
     nextSlide();
 }
 
-let timer= setInterval(autoPlay,4000);
+let timer= setInterval(autoPlay,4000);*/
 
  showDivs(slideIndex);
 function showDivs(n) {
