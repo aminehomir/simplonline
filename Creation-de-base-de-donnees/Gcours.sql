@@ -1,11 +1,7 @@
 create database GCours;
 use GCours;
 
-Select*from Enseignat
-Select*from Cours
-Select*from Etudiant
-Select*from Salle
-Select*from association2
+
 
 /*==============================================================*/
 /* Table: Cours                                                 */
@@ -49,20 +45,6 @@ create table Etudiant
 
 
 /*==============================================================*/
-/* Index: COURS_PK                                              */
-/*==============================================================*/
-create unique index COURS_PK on Cours (
-numcours ASC
-);
-
-/*==============================================================*/
-/* Index: ASSOCIATION3_FK                                       */
-/*==============================================================*/
-create index ASSOCIATION3_FK on Cours (
-numsalle ASC
-);
-
-/*==============================================================*/
 /* Table: Salle                                                 */
 /*==============================================================*/
 create table Salle 
@@ -82,6 +64,23 @@ create table association2
    numetudiant          integer                        not null,
    constraint PK_ASSOCIATION2 primary key clustered (numcours, numetudiant)
 );
+
+/*==============================================================*/
+/* Index: COURS_PK                                              */
+/*==============================================================*/
+create unique index COURS_PK on Cours (
+numcours ASC
+);
+
+/*==============================================================*/
+/* Index: ASSOCIATION3_FK                                       */
+/*==============================================================*/
+create index ASSOCIATION3_FK on Cours (
+numsalle ASC
+);
+
+
+
 
 /*==============================================================*/
 /* Index: ENSEIGNAT_PK                                          */
@@ -137,76 +136,69 @@ numetudiant ASC
 /*==============================================================*/
 alter table Cours
    add constraint FK_COURS_ASSOCIATI_SALLE foreign key (numsalle)
-      references Salle (numsalle)
+      references Salle (numsalle);
       
 
 alter table Enseignat
    add constraint FK_ENSEIGNA_ASSOCIATI_COURS foreign key (numcours)
-      references Cours (numcours)
+      references Cours (numcours);
     
 
 alter table association2
    add constraint FK_ASSOCIAT_ASSOCIATI_COURS foreign key (numcours)
-      references Cours (numcours)
+      references Cours (numcours);
     
 
 alter table association2
    add constraint FK_ASSOCIAT_ASSOCIATI_ETUDIANT foreign key (numetudiant)
-      references Etudiant (numetudiant)
+      references Etudiant (numetudiant);
  
  
 -- Creates the Users --
 
-CREATE LOGIN amine 
-WITH PASSWORD='amine123';
+CREATE USER 'User1'@'localhost' IDENTIFIED BY 'amine123';
+GRANT ALL PRIVILEGES ON * . * TO 'User1'@'localhost';
+FLUSH PRIVILEGES;
 
 
-CREATE USER amine FOR LOGIN amine;
-GRANT all TO amine;
 
-
-CREATE LOGIN amine2 
-WITH PASSWORD='amine123';
-
-
-CREATE USER amine2 FOR LOGIN amine2;
-GRANT insert TO amine2;
+CREATE USER 'User2'@'localhost' IDENTIFIED BY 'amine123';
+GRANT CREATE, SELECT ON * . * TO 'User2'@'localhost';
 
 
 
 
---Insertion --
 
-Insert into Salle values (1,'Salle1',20)
-Insert into Salle values (2,'Salle3',20)
-insert into Etudiant values(1,'Amine','Homir','+21206788544','HomirAmin@gmail.com','2018-04-25')
-insert into Cours values(1,1,'UML')
-insert into Cours values(2,1,'UML')
+Insert into Salle values (1,'Salle1',20);
+Insert into Salle values (2,'Salle3',20);
+insert into Etudiant values(1,'Amine','Homir','+21206788544','HomirAmin@gmail.com','2018-04-25');
+insert into Cours values(1,1,'UML');
+insert into Cours values(2,1,'UML');
 
-insert into Enseignat values(1,1,'mohamed','homir','+2123580','hr.amine@gmail.com','2018-04-25')
+insert into Enseignat values(1,1,'mohamed','homir','+2123580','hr.amine@gmail.com','2018-04-25');
 insert into association2 values(1,1);
 
 -- Update --
 
 UPDATE Salle
 SET nom='salle2', capacite=30
-WHERE numsalle=1
+WHERE numsalle=1;
 
 UPDATE Salle
 SET nom='salle4', capacite=30
-WHERE numsalle=2
+WHERE numsalle=2;
 
 UPDATE Etudiant 
 SET  nom='homir', prenom='amine', tel='+212648680297', mail='amine@gmail.com', anneeEntree='2020-05-20'
-WHERE numetudiant=1 
+WHERE numetudiant=1 ;
 
 UPDATE Cours
 SET numsalle=2, libelleCours='sql'
-WHERE numcours=2
+WHERE numcours=2;
 
 UPDATE Enseignat 
 SET numcours=2, nom='homir', prenom='mohammed',tel='212648680297',mail='hr.amine@gmail.com', datePriseDeFonction='2020-05-20'
-WHERE numpersonne=1
+WHERE numpersonne=1;
 
 
 -- Delete --
@@ -224,9 +216,4 @@ WHERE numetudiant=1;
 
 DELETE FROM Etudiant 
 WHERE numetudiant=1;
-
-
-
-
-
 
