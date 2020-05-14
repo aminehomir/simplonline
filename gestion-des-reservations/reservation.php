@@ -2,28 +2,6 @@
 
  include 'connection.php';
 
-session_start();
-$volid=$_SESSION['volid'];
-
-
-
-
-
-if(isset($_POST['submit'])){
-
- 
-    $query1 = "SELECT MAX(CodeClient) FROM client";
-    $test1=mysqli_query($conn,$query1);
-    $result = mysqli_fetch_array($test1);
-    
-    $row1=$result['MAX(CodeClient)'];
-
-     $date = $_POST['date'];
-
-     $query = "INSERT INTO reservation(Id_client,Id_vol,DateReservation) VALUES('$row1','$volid','$date')";
-     $test=mysqli_query($conn,$query);
-   
-    };
 
 
 
@@ -92,8 +70,7 @@ http://www.templatemo.com/tm-511-journey
                                 <div class="form-row tm-search-form-row">                                
                                    
                                     <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-                                        <label for="passport">Date de reservation</label>
-                                        <input name="date" type="date" class="form-control" id="date"  required='true'>
+                                       
                                     </div>
                                    
                                 </div> <!-- form-row -->

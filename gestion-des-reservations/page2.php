@@ -21,6 +21,17 @@ if(isset($_POST['submit'])){
     
     $test=mysqli_query($conn,$query);
    
+    $query1 = "SELECT MAX(CodeClient) FROM client";
+    $test1=mysqli_query($conn,$query1);
+    $result = mysqli_fetch_array($test1);
+    
+    $row1=$result['MAX(CodeClient)'];
+    $id=$_SESSION['volid'];
+
+     //$date=;
+
+     $query2 = "INSERT INTO reservation(Id_client,Id_vol,DateReservation) VALUES('$row1','$id',NOW())";
+     $test2=mysqli_query($conn,$query2);
   
     
     

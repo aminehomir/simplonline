@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 14 mai 2020 à 05:25
+-- Généré le : jeu. 14 mai 2020 à 15:33
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.2.30
 
@@ -43,7 +43,7 @@ CREATE TABLE `client` (
 
 INSERT INTO `client` (`CodeClient`, `Nom`, `Prenom`, `Address`, `CodePostal`, `Ville`, `NumeroPassport`) VALUES
 (1, 'homir', 'mohammed', '37 av chakib arsalane qu jnane chekkouri', '46000', 'safi', '3333322'),
-(2, 'hr', 'mohammed', '37 av chakib arsalane qu jnane chekkouri', '46000', 'safi', '333333333333');
+(2, 'hr', 'mohammed', '37 av chakib arsalane qu jnane chekkouri', '46000', 'safi', '3333322');
 
 -- --------------------------------------------------------
 
@@ -63,8 +63,8 @@ CREATE TABLE `reservation` (
 --
 
 INSERT INTO `reservation` (`NumeroReservation`, `Id_client`, `Id_vol`, `DateReservation`) VALUES
-(1, 1, 1, '2020-05-15 00:00:00'),
-(2, 2, 2, '2020-05-23 00:00:00');
+(1, 1, 1, '2020-05-14 13:19:33'),
+(2, 2, 2, '2020-05-14 13:20:18');
 
 -- --------------------------------------------------------
 
