@@ -3,33 +3,42 @@
 include 'connection.php';
 
   session_start();
- 
-
   
+  $id=$_POST['id'];
+  //echo "<input hidden value='$id' name='idvol'>";
+  
+  
+  
+  if(isset($_POST['id'] )){
+      
+    $_SESSION['vol']=$id;
+  
+    $sql = "SELECT * FROM vol WHERE Numvol=' $id'";
+   
+
+    $result = $conn->query($sql);
+   
+
+}
 
 
 if(isset($_POST['submit'])){
-
+   
     $nom = $_POST['Nom'];
     $prenom = $_POST['Prenom']; 
     $address = $_POST['Address'];
     $codepo = $_POST['CodePostal'];
     $ville = $_POST['Ville'];
     $numpass = $_POST['NumeroPassport'];
-
+    
     $query = "INSERT INTO client(Nom,Prenom,Address,CodePostal,Ville,NumeroPassport) VALUES('$nom','$prenom','$address','$codepo','$ville','$numpass')";
     
     $test=mysqli_query($conn,$query);
-   
-    $query1 = "SELECT MAX(CodeClient) FROM client";
-    $test1=mysqli_query($conn,$query1);
-    $result = mysqli_fetch_array($test1);
+    $row1=mysqli_insert_id($conn);
     
-    $row1=$result['MAX(CodeClient)'];
-    $id=$_SESSION['volid'];
 
-     //$date=;
-
+    $id=$_SESSION['vol'];
+    
      $query2 = "INSERT INTO reservation(Id_client,Id_vol,DateReservation) VALUES('$row1','$id',NOW())";
      $test2=mysqli_query($conn,$query2);
   
@@ -39,17 +48,8 @@ if(isset($_POST['submit'])){
     
  };
 
-if(isset($_POST['id'] )){
-   $id=$_POST['id'];
-   $_SESSION['volid'] = $id;
-    $sql = "SELECT * FROM vol WHERE Numvol=' $id'";
+
    
-
-    $result = $conn->query($sql);
-
-
-
-};    
 
 
  
@@ -119,17 +119,17 @@ http://www.templatemo.com/tm-511-journey
                     
                    
                 </tr>
-                <?php while($row = $result->fetch_assoc()){ ?>
+                <?php while($row = mysqli_fetch_object($result)){ ?>
                 <tr >
-                    <td><?php echo $row['num_vol']?></td>
-                   
-                    <td><?php echo $row['lieu_depart'] ?></td>
-                    <td><?php echo $row['lieu_arrive'] ?></td>
-                    <td><?php echo $row['date_depart'] ?></td>
-                    <td><?php echo $row['date_arrive'] ?></td>
-                    <td><?php echo $row['prix']?>DH</td>
+                    
+                    <td><?php echo $row->num_vol ?></td>
+                    <td><?php echo $row->lieu_depart ?></td>
+                    <td><?php echo $row->lieu_arrive ?></td>
+                    <td><?php echo $row->date_depart ?></td>
+                    <td><?php echo $row->date_arrive ?></td>
+                    <td><?php echo $row->prix ?>DH</td>
                      
-                    <input type="hidden" name="vol" value="<?php echo $row['Numvol'] ?>" />
+                    <input type="hidden" name="vol" value="<?php echo $row->Numvol  ?>" />
                    
                 </tr>
                 <?php } ?>
