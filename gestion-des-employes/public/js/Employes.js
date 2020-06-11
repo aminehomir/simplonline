@@ -91,4 +91,61 @@ $("#nameupdate").val(name);
 $("#emailupdate").val(email);
 $("#addresseupdate").val(address);
 $("#phoneupdate").val(phone);
-}
+};
+
+
+//update//
+$(document).ready(function () {
+
+     
+    
+    $("#Supdate").click(function(){ 
+     
+      console.log(localStorage.getItem("id"));
+      var name = $("#nameupdate").val();
+      var email = $("#emailupdate").val();
+      var address = $("#addresseupdate").val();
+      var phone = $("#phoneupdate").val();
+           $.ajax({
+              url:'/Update',
+              type:'post',
+              data:{index:localStorage.getItem("id"),tache:{name,email,address,phone}},
+              success:function(response){
+                getData(response);
+              }
+             
+          }); 
+
+          
+      
+  });
+
+});
+
+//delete//
+
+$(document).ready(function () {
+
+    
+    $("#Delete").click(function(){  // Recuperation des valeurs
+           
+        console.log(localStorage.getItem("id"));
+             $.ajax({
+                url:'/Delete',
+                type:'delete',
+                data:{index:localStorage.getItem("id")},
+                success:function(response){
+                  getData(response);
+                }
+               
+            }); 
+
+            
+        
+    });  
+
+});
+
+
+
+
