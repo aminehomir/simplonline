@@ -3,16 +3,26 @@
  if(isset($_SESSION['username'])):
  endif;
  
- //include('../Controleur/Reservation.php');
- include 'connection.php';
+ include_once '../Controleur/Reservation.php';
+ //include 'connection.php';
 
  //$sql = "Select passager.Nom , passager.Prenom, passager.NumeroPassport, reservation.Id_user, reservation.Id_Reservation, reservation.DateReservation from reservation,  passager ORDER BY reservation.Id_Reservation ";
-   
- $sql = "SELECT * FROM reservation WHERE Numvol=' $id'";
-    $result = $conn->query($sql);
 
 
+ $connect = mysqli_connect("localhost", "root", "", "gestion_vols");
+ $id_res=$_SESSION['Id_Reservation'];
+       //$id = $_GET['Id_Reservation'];
+       $idr= $_GET['$id_res'];
 
+       //$sql= "SELECT * FROM vol,reservation,passager WHERE reservation.Id_Reservation=? and reservation.Id_vol=vol.Numvol and Reservation.Id_user=passager.Id_user";
+     $sql = "SELECT * FROM reservation,passager WHERE reservation.Id_Reservation and Reservation.Id_user=passager.Id_user";
+     $result = $connect->query($sql);
+
+ 
+ // $sql = "SELECT * FROM vol";
+ 
+
+ 
 
  
 
@@ -130,17 +140,25 @@ http://www.templatemo.com/tm-511-journey
             <?php while($row = mysqli_fetch_object($result)){ ?>
                 <tr >
                     
+                    <td><?php echo $row->Id_Reservation ?></td>
+                    <td><?php echo $row->Id_user ?></td>
                     <td><?php echo $row->Nom ?></td>
                     <td><?php echo $row->Prenom ?></td>
+                    <td><?php echo $row->Address ?></td>
+                    <td><?php echo $row->CodePostal ?></td>
+                    <td><?php echo $row->Ville ?></td>
                     <td><?php echo $row->NumeroPassport ?></td>
-                    <td><?php echo $row->Id_user ?></td>
-                    <td><?php echo $row->Id_Reservation ?></td>
-                    <td><?php echo $row->DateReservation ?>DH</td>
+                    <td><?php echo $row->DateReservation ?></td>
+
+                    
                      
-                   
+                    <input type="hidden" name="vol" value="<?php echo $row->Numvol  ?>" />
                    
                 </tr>
-                <?php } ?>
+                <?php } ?>  
+                   
+                
+               
         </table>
         <div>
             <input type="submit" onclick="window.location.href='profile.php'" value="Retour au liste des vols">

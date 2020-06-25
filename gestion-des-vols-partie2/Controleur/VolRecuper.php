@@ -5,7 +5,7 @@ include_once '../modele/vol.php';
 
   <?php 
 
-$data = new vol;
+$data = new vol();
 $table = 'vol';
 $id_V='';
 

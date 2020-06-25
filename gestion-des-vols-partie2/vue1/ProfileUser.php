@@ -34,17 +34,32 @@ select ,option{
 	outline: none;
 	border-bottom-color: #67DAD5 !important;
   }
+
+  .container1{
+    margin-top:80px;
+    margin-bottom:50px;
+    text-align: center;
+    background-color: #eee;
+    width: 400px;
+    padding: 10px;
+  }
+  .container2{
+    width:100%;
+    width: 30%;
+    margin: auto;
+  }
 </style>
 
 <body>
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
            <div class="container"> 
        
-		
+		      
         <div class="collapse navbar-collapse">
-      
+        <a  href="profile.php" >home</a>
             <ul class="nav navbar-nav-expand-lg navbar-right">
                 <li  class="dropdown">
+                
 				
                     <a  href="#" class="dropdown " data-toggle="dropdown">
                         <span class="glyphicon glyphicon-user"></span> 
@@ -66,7 +81,7 @@ select ,option{
                                         <p class="text-left">
                                             <a href="ProfileUser.php" class="btn btn-primary ">Profil</a>
                                         </p>
-                                    </div>
+                                   </div>
                                 </div>
                             </div>  
 								
@@ -89,6 +104,32 @@ select ,option{
         </div>
     </div>
 </div>
+
+
+<main>
+ <div class="container2">
+    <div class="container1">
+      <h1>Profile User</h1>
+      
+      <div class="service-details">
+      
+        <div class="service-hover-text">
+          <?php if (isset($_SESSION['username']) && isset($_SESSION['user_type']) && isset($_SESSION['email'])) : ?> 
+
+            
+            <p>Nom : <?php echo $_SESSION['username']; ?></p>
+
+            <p>Status : <?php echo $_SESSION['user_type']; ?> </p>
+        </div>
+        <div class="service-white service-text">
+          <p>Email :   <a href="#"><?php echo $_SESSION['email']; ?></a></p>
+        
+        </div>
+      </div>
+    </div>
+    </div>
+  <?php endif ?>
+  </main>
   <!-- Navigation !-->
  
 
@@ -97,13 +138,13 @@ select ,option{
   <script>
     function showReservation(str) {
       if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
+        document.getElementById("test").innerHTML = "";
         return;
       } else {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("txtHint").innerHTML = this.responseText;
+            document.getElementById("test").innerHTML = this.responseText;
           }
         };
         xmlhttp.open("GET", "getuser.php?rev=" + str, true);
@@ -130,10 +171,10 @@ select ,option{
     // echo "<pre>", print_r($res) , "<pre>";
     ?>
  
-   <h2>Vos Reservation</h2>
+   <h2>Reservations</h2>
     <select name="users" onchange="showReservation(this.value)">
  
-      <option value="">Dates de Vos Reservation</option>
+      <option value=""> dates de Reservation</option>
 
       <?php
 
@@ -148,7 +189,7 @@ select ,option{
 
 
   <br>
-  <div id="txtHint" ></div>
+  <div id="test" ></div>
   <br>
 
 

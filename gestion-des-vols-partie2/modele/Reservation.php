@@ -7,6 +7,7 @@
     
         $query = "INSERT INTO passager(Nom,Prenom,Address,CodePostal,Ville,NumeroPassport,Id_user) VALUES('$nom','$prenom','$address','$codepo','$ville','$numpass','$iduser')";
         $result = $this->conn()->query($query);
+        
         return true;  
     }
     
@@ -14,18 +15,14 @@
     
         $AddR = "insert into reservation(Id_user,Id_vol,DateReservation) values ('$iduser','$id',NOW())";  
         $result = $this->conn()->query($AddR);
+       
         return true;  
     }
     
     
 
 
-    function getDateReservation($iduser) {  
-        
-      $getD = "SELECT DateReservation from reservation where Id_user='$iduser'";  
-      $result = $this->conn()->query($getD);
-      return true;  
-  }
+  
 
 
 

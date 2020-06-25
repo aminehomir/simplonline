@@ -20,13 +20,21 @@ if(isset($_POST["submit"])){
         $numpass = $_POST['NumeroPassport'];
         $iduser=$_SESSION['Id_user'];
         $id= $_GET['Numvol'];
-      
-
+        ;
+        
 
          $query= $data->AddPassager($nom,$prenom,$address,$codepo,$ville,$numpass,$iduser);
         $AddR= $data->AddReservation($iduser,$id);
-        header('location:reservation.php');
+        
+        $id_res =$data->insert_id;
+        $_GET['Id_Reservation'];
+        header('location:profile.php?"');
+
   
 
 }
+
+
+
+
    ?>
