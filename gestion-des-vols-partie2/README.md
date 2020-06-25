@@ -26,5 +26,5 @@ Now Connecting Database
 ```
 After Creating Database,
 ```
- 9th Step: Open a browser and go to URL "http://localhost/gestionvol/vue1/"
+ 9th Step: Open a browser and go to URL "http://localhost/gestion-des-vols-partie2/vue1/"
 ```
