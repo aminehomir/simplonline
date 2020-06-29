@@ -8,10 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <style>
-
+.tabl{
+  justify-content: center;
+  margin: auto;
+    width: 57%;
+}
 </style>
 </head>
 <body>
@@ -37,8 +41,8 @@ $condition = [
 
 $res = $data->History('reservation', $condition);
 ?>
-
-<table class='table table-striped' style="width: 80%;">
+<div class='tabl'>
+<table class='table table-striped' style="width: 100%;">
 <tr>
 <th>LieuDepart</th>
 <th>LieuArrive</th>
@@ -62,6 +66,7 @@ foreach($res as $vol) {
 ?>
 
 </table>
+</div>
 
 
   <!-- Optional JavaScript -->
