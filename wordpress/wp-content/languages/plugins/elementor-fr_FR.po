@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Elementor Page Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-24 22:17:09+0000\n"
+"PO-Revision-Date: 2020-06-11 14:41:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1520,7 +1520,7 @@ msgstr "Elementor %s"
 #: includes/template-library/sources/local.php:1309
 #: core/common/modules/finder/categories/create.php:62
 msgid "Add New %s"
-msgstr "Ajouter un·e %s"
+msgstr "Ajouter un %s"
 
 #. translators: %d: Number of rows
 #: includes/utils.php:247
@@ -1618,12 +1618,12 @@ msgstr "Séparateur"
 
 #: includes/template-library/sources/local.php:1305
 msgid "Add templates and reuse them across your website. Easily export and import them to any other project, for an optimized workflow."
-msgstr "Ajoutez des modèles et réutilisez-les sur votre site web. Exportez et importez-les facilement vers n’importe quel autre projet, pour un flux de travail optimisé."
+msgstr "Ajoutez des modèles et réutilisez-les sur votre site web. Exportez-les et importez-les facilement vers n’importe quel autre projet, pour un flux de travail optimisé."
 
 #. translators: %s: Template type label.
 #: includes/template-library/sources/local.php:1302
 msgid "Create Your First %s"
-msgstr "Créez votre premier·e %s"
+msgstr "Créez votre %s"
 
 #: includes/template-library/sources/local.php:1213
 msgid "All"
@@ -2806,7 +2806,7 @@ msgstr "<strong>Important :</strong> il est fortement recommandé de <a target=
 #: includes/settings/tools.php:256
 #: core/common/modules/finder/categories/tools.php:52
 msgid "Replace URL"
-msgstr "Remplacer l’URL"
+msgstr "Remplacement d’URL"
 
 #. translators: 1: Minimum recommended_memory, 2: Codex URL
 #: modules/system-info/reporters/wordpress.php:89
