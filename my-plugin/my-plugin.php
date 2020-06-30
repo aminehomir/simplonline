@@ -55,10 +55,11 @@ function deactivate_my_plugin() {
 	My_Plugin_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_my_plugin' );
-register_deactivation_hook( __FILE__, 'deactivate_my_plugin' );
+/*register_activation_hook( __FILE__, 'activate_my_plugin' );
+register_deactivation_hook( __FILE__, 'deactivate_my_plugin' );*/
 
-
+register_activation_hook( __FILE__, 'createtable' );
+register_deactivation_hook( __FILE__, 'deletetable' );
 
 
 
@@ -67,6 +68,9 @@ register_deactivation_hook( __FILE__, 'deactivate_my_plugin' );
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-my-plugin.php';
+
+
+    
 
 /**
  * Begins execution of the plugin.
@@ -83,6 +87,25 @@ function run_my_plugin() {
 	$plugin->run();
 
 }
+
+function createtable(){
+    
+   global $wpdb;
+     $wpdb->query("CREATE TABLE IF NOT EXISTS {$wpdb->prefix}myplugin0(id int NOT NULL PRIMARY KEY AUTO_INCREMENT, nom varchar(255) NOT NULL,option varchar(255) NOT NULL , description varchar(255) NOT NULL);");
+   
+
+}
+
+function deletetable(){
+    
+   global $wpdb;
+     $wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}myplugin0");
+   
+
+}
+
+
+
 run_my_plugin();
 
 add_action("admin_menu","addMenu");
@@ -96,15 +119,30 @@ function addMenu()
 
 function option1()
 {
+    
+       
+    
     echo "<h1>Bienvenue à my plugin</h2>";
         echo "<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>";
-}
+     
+    echo"<h1>les informations</h1>";
+  
+         include_once('desp.php');
+    
+         
+          }
+    
+    
+ 
+
 
 
 
 
 function option2() {
-   
+
+      
+  
    
     echo "<h1>réglages</h2>";
     

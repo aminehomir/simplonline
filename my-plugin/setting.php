@@ -1,28 +1,21 @@
 <?php
+
 if(isset($_POST['submit'])){
-   createtable();
+  
     save();
    
 }
 
-function createtable(){
-    
-    $link = mysqli_connect("localhost", "root", "", "wordpress");
-    $sql = "CREATE TABLE myplugin(id int NOT NULL PRIMARY KEY AUTO_INCREMENT, nom varchar(255) NOT NULL,option varchar(255) NOT NULL , description varchar(255) NOT NULL)";
-    $result = mysqli_query($link, $sql);
-    return $result;
 
-}
 
 
 function save(){
 
-    $link = mysqli_connect("localhost", "root", "", "wordpress");
+   global $wpdb;
     $username= $_POST['username'];  
     $option= $_POST['option'];
     $description= $_POST['description'];
-    
-
+    $tablename = $wpdb->prefix."myplugin0";
     
          
 
@@ -33,8 +26,9 @@ function save(){
     }
     else
     {
-         $query="insert into myplugin(nom,option,description) VALUES ('$username', '$option', '$description')";
-         $result=mysqli_query($link,$query);
+         $query="insert into ".$tablename."(nom,option,description) VALUES ('$username', '$option', '$description')";
+         $wpdb->query($query);
+        
     }
 }
     
