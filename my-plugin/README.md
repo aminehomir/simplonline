@@ -16,25 +16,14 @@ After Starting Apache and MySQL in XAMPP, follow the following steps
 
 ```
 1st Step: Extract file
-2rd Step: copy my-plugin folder and past it in your folder wordpress instalation under this following path
+2rd Step: copy my-plugin folder and past it in "your-folder"  instalation under this following path
        wp-content\plugins
-```
-Now Connecting Database
-
-```
- 4th Step: Open a browser and go to URL "http://localhost/phpmyadmin/"
- 5th Step: Then, click on the databases tab
- 6th Step: Create a database naming "wordpress" and then click on the import tab
- 7th Step: Click on browse file and select "wordpress.sql" file which is inside the folder
- 8th Step: Click on go.
-```
-After Creating Database,
 
  
 ```
 finally
 
-Open a browser and go to URL "http://localhost/wordpress/wp-admin/"
+Open a browser and go to URL "http://localhost/"your-folder" /wp-admin/"
 UserName: amine Password: amine-26
 
 ```
